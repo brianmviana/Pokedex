@@ -1,4 +1,4 @@
-package dev.brianmviana.api.pokedex;
+package dev.brianmviana.apis.pokedex;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
