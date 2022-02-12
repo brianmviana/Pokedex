@@ -3,7 +3,7 @@ INSERT INTO tipo(id, nome) VALUES(2, 'Sombrio');
 INSERT INTO tipo(id, nome) VALUES(3, 'Dragão');
 INSERT INTO tipo(id, nome) VALUES(4, 'Eletrico');
 INSERT INTO tipo(id, nome) VALUES(5, 'Fada');
-INSERT INTO tipo(id, nome) VALUES(6, 'Luta');
+INSERT INTO tipo(id, nome) VALUES(6, 'Lutador');
 INSERT INTO tipo(id, nome) VALUES(7, 'Fogo');
 INSERT INTO tipo(id, nome) VALUES(8, 'Voador');
 INSERT INTO tipo(id, nome) VALUES(9, 'Fantasma');
