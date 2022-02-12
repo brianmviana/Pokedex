@@ -1,12 +1,9 @@
 package dev.brianmviana.apis.pokedex.entities;
 
-import javax.persistence.Id;
+public class Tipo {
 
-public class Type {
-
-    @Id
     private Integer id;
 
-    private String name;
+    private String nome;
 
 }
