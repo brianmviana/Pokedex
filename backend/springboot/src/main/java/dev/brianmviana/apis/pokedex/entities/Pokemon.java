@@ -13,6 +13,8 @@ public class Pokemon {
 
     private List<Tipo> tipo = new ArrayList<>();
 
+    private String geracao;
+
 //    private String habilidades;
 //    private String Fraquezas;
 //    private Double altura;
@@ -51,6 +53,15 @@ public class Pokemon {
 
     public Pokemon setTipo(Tipo tipo) {
         this.tipo.add(tipo);
+        return this;
+    }
+
+    public String getGeracao() {
+        return geracao;
+    }
+
+    public Pokemon setGeracao(String geracao) {
+        this.geracao = geracao;
         return this;
     }
 
