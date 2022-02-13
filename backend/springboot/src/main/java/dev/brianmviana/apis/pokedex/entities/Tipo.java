@@ -6,4 +6,21 @@ public class Tipo {
 
     private String nome;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public Tipo setId(Integer id) {
+        this.id = id;
+        return this;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public Tipo setNome(String nome) {
+        this.nome = nome;
+        return this;
+    }
 }
