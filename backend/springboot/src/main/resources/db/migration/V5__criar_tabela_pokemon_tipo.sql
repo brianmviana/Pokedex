@@ -1,5 +1,4 @@
 CREATE TABLE pokemon_tipo (
-	id INTEGER auto_increment PRIMARY KEY,
 	id_pokemon INTEGER,
 	id_tipo INTEGER,
     FOREIGN KEY(id_pokemon) REFERENCES pokemon(id),

@@ -1,6 +1,7 @@
-CREATE TABLE tipo (
+CREATE TABLE geracao (
 	id INTEGER auto_increment PRIMARY KEY,
-	nome varchar(255) NOT NULL
+	nome varchar(255) NOT NULL,
+	regiao varchar(255) NOT NULL
 )
 ENGINE=InnoDB
 DEFAULT CHARSET=utf8

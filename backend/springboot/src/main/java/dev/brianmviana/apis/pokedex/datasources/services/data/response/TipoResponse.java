@@ -1,9 +1,9 @@
 package dev.brianmviana.apis.pokedex.datasources.services.data.response;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Entity(name = "tipo")
+@Entity
+@Table(name = "tipo")
 public class TipoResponse {
 
     @Id

@@ -5,7 +5,6 @@ import dev.brianmviana.apis.pokedex.datasources.services.mappers.PokemonMapper;
 import dev.brianmviana.apis.pokedex.entities.Pokemon;
 import dev.brianmviana.apis.pokedex.repositories.PokemonRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
