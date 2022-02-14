@@ -1,4 +1,4 @@
-INSERT INTO tipo(id, nome) VALUES(1, 'Inceto');
+INSERT INTO tipo(id, nome) VALUES(1, 'Inseto');
 INSERT INTO tipo(id, nome) VALUES(2, 'Sombrio');
 INSERT INTO tipo(id, nome) VALUES(3, 'Dragão');
 INSERT INTO tipo(id, nome) VALUES(4, 'Eletrico');
