@@ -56,6 +56,11 @@ public class Pokemon {
         return this;
     }
 
+    public Pokemon setTipo(List<Tipo> tipo) {
+        this.tipo = tipo;
+        return this;
+    }
+
     public String getGeracao() {
         return geracao;
     }
