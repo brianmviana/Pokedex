@@ -1,70 +1,41 @@
 package dev.brianmviana.apis.pokedex.datasources;
 
-import dev.brianmviana.apis.pokedex.entities.Geracao;
+import dev.brianmviana.apis.pokedex.datasources.services.PokemonMySqlRepository;
+import dev.brianmviana.apis.pokedex.datasources.services.mappers.PokemonMapper;
 import dev.brianmviana.apis.pokedex.entities.Pokemon;
-import dev.brianmviana.apis.pokedex.entities.Tipo;
 import dev.brianmviana.apis.pokedex.repositories.PokemonRepository;
 import org.springframework.stereotype.Repository;
+
+import java.util.ArrayList;
 import java.util.List;
-import static java.util.Arrays.asList;
 
 @Repository
 public class PokemonDataSource implements PokemonRepository {
 
+    private final PokemonMySqlRepository pokemonMySqlRepository;
+
+    public PokemonDataSource(PokemonMySqlRepository pokemonMySqlRepository) {
+        this.pokemonMySqlRepository = pokemonMySqlRepository;
+    }
+
     @Override
     public List<Pokemon> getAll() {
+        var pokemonsResponse = pokemonMySqlRepository.findAll();
+        var pokemons = new ArrayList<Pokemon>();
+        for (var pokemon : pokemonsResponse) {
+            pokemons.add(PokemonMapper.INSTANCE.map(pokemon));
+        }
         return pokemons;
     }
 
     // TODO - Atualizar metodo para remover o retorno null
     @Override
     public Pokemon getById(Integer id) {
-        for (Pokemon pokemon: pokemons) {
-            if (pokemon.getId().equals(id)){
-                return pokemon;
-            }
+        var pokemonReponse = pokemonMySqlRepository.getById(id);
+        if (pokemonReponse != null) {
+            return PokemonMapper.INSTANCE.map(pokemonReponse);
         }
         return null;
     }
-
-    /** A implementação a baixo esta sendo ultilizada apenas para teste, enquanto o metodo de consulta a base de dados não é implementado **/
-    private List<Pokemon> pokemons = asList(
-            new Pokemon()
-                    .setId(1)
-                    .setNome("Bulbasaur")
-                    .setNumero("001")
-                    .setTipo(
-                            new Tipo()
-                                    .setId(10)
-                                    .setNome("Planta")
-                    ).setTipo(
-                            new Tipo()
-                                    .setId(14)
-                                    .setNome("Venenoso")
-                    )
-                    .setGeracao(Geracao.GERACAO_1.toString())
-            ,
-            new Pokemon()
-                    .setId(4)
-                    .setNome("Charmander")
-                    .setNumero("004")
-                    .setTipo(
-                            new Tipo()
-                                    .setId(7)
-                                    .setNome("Fogo")
-                    )
-                    .setGeracao(Geracao.GERACAO_1.toString())
-            ,
-            new Pokemon()
-                    .setId(7)
-                    .setNome("Squirtle")
-                    .setNumero("007")
-                    .setTipo(
-                            new Tipo()
-                                    .setId(18)
-                                    .setNome("Agua")
-                    )
-                    .setGeracao(Geracao.GERACAO_1.toString())
-    );
 
 }
