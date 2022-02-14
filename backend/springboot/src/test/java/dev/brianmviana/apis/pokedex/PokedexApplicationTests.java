@@ -1,4 +1,4 @@
-package dev.brianmviana.Pokedex;
+package dev.brianmviana.apis.pokedex;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
