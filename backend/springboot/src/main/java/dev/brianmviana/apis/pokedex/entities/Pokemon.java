@@ -13,7 +13,7 @@ public class Pokemon {
 
     private List<Tipo> tipo = new ArrayList<>();
 
-    private String geracao;
+    private Geracao geracao;
 
 //    private String habilidades;
 //    private String Fraquezas;
@@ -61,11 +61,11 @@ public class Pokemon {
         return this;
     }
 
-    public String getGeracao() {
+    public Geracao getGeracao() {
         return geracao;
     }
 
-    public Pokemon setGeracao(String geracao) {
+    public Pokemon setGeracao(Geracao geracao) {
         this.geracao = geracao;
         return this;
     }

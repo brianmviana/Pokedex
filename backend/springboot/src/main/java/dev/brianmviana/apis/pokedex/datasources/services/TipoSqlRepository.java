@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public interface TipoSqlRepository extends JpaRepository<TipoResponse, Integer> {
 
-    @Query(value = "SELECT * FROM tipo t WHERE t.id IN (SELECT id_tipo FROM pokemon_tipo WHERE id_pokemon = :pokemonId)", nativeQuery = true)
+    @Query(value = "SELECT * FROM tipo t WHERE t.id IN (SELECT id_tipo FROM pokemon_tipo WHERE id_pokemon = ?1)", nativeQuery = true)
     List<TipoResponse> findTiposByPokemonId(Integer pokemonId);
 
 }

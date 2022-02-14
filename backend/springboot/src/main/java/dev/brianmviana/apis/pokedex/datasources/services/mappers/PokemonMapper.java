@@ -2,7 +2,6 @@ package dev.brianmviana.apis.pokedex.datasources.services.mappers;
 
 import dev.brianmviana.apis.pokedex.datasources.services.data.response.PokemonResponse;
 import dev.brianmviana.apis.pokedex.entities.Pokemon;
-import dev.brianmviana.apis.pokedex.entities.Tipo;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

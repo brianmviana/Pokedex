@@ -13,7 +13,9 @@ public class PokemonResponse {
 
     private String numero;
 
-    private String geracao;
+    @OneToOne
+    @JoinColumn(name = "geracao_id", referencedColumnName = "id")
+    private GeracaoResponse geracao;
 
     public Integer getId() {
         return id;
@@ -42,11 +44,11 @@ public class PokemonResponse {
         return this;
     }
 
-    public String getGeracao() {
+    public GeracaoResponse getGeracao() {
         return geracao;
     }
 
-    public PokemonResponse setGeracao(String geracao) {
+    public PokemonResponse setGeracao(GeracaoResponse geracao) {
         this.geracao = geracao;
         return this;
     }
