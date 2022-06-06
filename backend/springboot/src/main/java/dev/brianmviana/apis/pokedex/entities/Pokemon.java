@@ -11,14 +11,16 @@ public class Pokemon {
 
     private String numero;
 
-    private List<Tipo> tipo = new ArrayList<>();
-
     private Geracao geracao;
 
-//    private String habilidades;
-//    private String Fraquezas;
+    private List<Tipo> tipo = new ArrayList<>();
+
+    private List<Tipo> fraquezas = new ArrayList<>();;
+
 //    private Double altura;
 //    private Double peso;
+//    private String habilidades;
+
 
     public Integer getId() {
         return id;
@@ -58,6 +60,15 @@ public class Pokemon {
 
     public Pokemon setTipo(List<Tipo> tipo) {
         this.tipo = tipo;
+        return this;
+    }
+
+    public List<Tipo> getFraquezas() {
+        return fraquezas;
+    }
+
+    public Pokemon setFraquezas(List<Tipo> fraquezas) {
+        this.fraquezas = fraquezas;
         return this;
     }
 

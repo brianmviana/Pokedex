@@ -1,0 +1,1 @@
+INSERT INTO pokemon_fraqueza (`id_pokemon`, `id_fraqueza`) VALUES (1, 10);
